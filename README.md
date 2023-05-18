@@ -1,5 +1,5 @@
-##INSTRUCCIONES
+## INSTRUCCIONES
 
-###Instalación de paquetes
+### Instalación de paquetes
 
-Ejecutar el comando "npm install"
+Ejecutar el comando "npm install".
