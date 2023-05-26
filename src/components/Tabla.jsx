@@ -1,15 +1,16 @@
 import CabeceraTabla from './CabeceraTabla'
+import FilaAlumno from './FilaAlumno'
 
 const Tabla = () => {
   return (
     <>
       <table>
-        <tr>
+        <thead>          
           <CabeceraTabla/>
-        </tr>
-        <tr>
-          Hello
-        </tr>
+        </thead>
+        <tbody>
+          <FilaAlumno/>
+        </tbody>
       </table>
     </>
   )

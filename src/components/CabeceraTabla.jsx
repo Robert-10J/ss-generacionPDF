@@ -1,15 +1,15 @@
-import { HEADERS } from '../itemsHead.js'
+import { HEADERS_TABLA } from '../consts.js'
 
 const CabeceraTabla = () => {
-  const headers = Object.values(HEADERS)
+  const headers = Object.values(HEADERS_TABLA)
   return (
-    <thead>
+    <tr>
       {            
         headers.map((header, index) => (
           <th key={index}>{header}</th>
         ))
       }
-    </thead>
+    </tr>
   )
 }
 
