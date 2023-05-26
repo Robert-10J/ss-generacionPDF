@@ -1,4 +1,4 @@
-export const HEADERS = {
+export const HEADERS_TABLA = {
   id: 'ID',
   nombre: 'NOMBRE',
   curp: 'CURP',
