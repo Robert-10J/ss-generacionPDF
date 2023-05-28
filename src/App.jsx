@@ -1,6 +1,6 @@
 import Tabla from './components/Tabla'
 
-const App = () => {
+const App = () => {   
   return (
     <>
       <Tabla/>
