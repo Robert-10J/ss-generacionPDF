@@ -1,20 +1,33 @@
-import db from '../db.json'
+import { useEffect, useState } from 'react'
 import GenerarPDF from './GenerarPDF'
+import { obtenerAlumnos } from '../services/peticiones'
 
 const FilaAlumno = () => {
+
+  const [alumnos, setAlumnos] = useState([])
+
+  useEffect(() => {
+    const getAlumnos = async () => {
+      const alumnos = await obtenerAlumnos()
+      setAlumnos(alumnos)
+    }
+    getAlumnos()
+  }, [])
+
   return (
     <>
-      {
-        db.map(alumno => (
+      { 
+        alumnos.map( alumno => (
           <tr key={alumno.id}>
             <td>{alumno.id}</td>
-            <td>{alumno.nombre}</td>
-            <td>{alumno.curp}</td>
+            <td>{alumno.name}</td>
             <td>{alumno.email}</td>
-            <td>{alumno.NumeroControl}</td>            
-            <td>{alumno.Usuario.name}</td>            
+            <td>{alumno.username}</td>
+            <td>{alumno.address.zipcode}</td>
             <td>
-              <GenerarPDF/>
+              <GenerarPDF
+                idAlumno={alumno.id}
+              />
             </td>
           </tr>
         ))

@@ -1,7 +1,7 @@
-const GenerarPDF = () => {
+const GenerarPDF = ({ idAlumno }) => {
   return (
-    <button onClick={()  => console.log('imprimiendo')}>
-      Generar PDF
+    <button onClick={()  => console.log('imprimiendo', idAlumno)}>
+      Imprimir
     </button>
   )
 }
