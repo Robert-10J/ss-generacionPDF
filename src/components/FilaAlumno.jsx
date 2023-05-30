@@ -18,7 +18,7 @@ const FilaAlumno = () => {
     <>
       { 
         alumnos.map( alumno => (
-          <tr key={alumno.id}>
+          <tr key={alumno.id} className='mt-10'>
             <td>{alumno.id}</td>
             <td>{alumno.name}</td>
             <td>{alumno.email}</td>

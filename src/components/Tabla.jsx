@@ -3,7 +3,7 @@ import FilaAlumno from './FilaAlumno'
 
 const Tabla = () => {
   return (
-    <>
+    <div className='p-5'>
       <table>
         <thead>          
           <CabeceraTabla/>
@@ -12,7 +12,7 @@ const Tabla = () => {
           <FilaAlumno/>
         </tbody>
       </table>
-    </>
+    </div>
   )
 }
 
