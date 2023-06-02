@@ -1,4 +1,4 @@
-import { modifyPDF } from '../utils/pdf'
+import { modifyPDF } from './utils/pdf'
 import Tabla from './components/Tabla'
 /* import { getPDF } from './services/peticiones' */
 

@@ -14,9 +14,8 @@ export async function modifyPDF() {
   const { width, height } = firstPage.getSize()
 
   console.log(width, height)
-
   firstPage.drawText('Hello', {
-    x: 5,
+    x: 50,
     y: height / 2 + 300,
     size: 50,
     font: monserratFont,
@@ -31,5 +30,5 @@ export async function modifyPDF() {
   const url = URL.createObjectURL(blob);
 
   // Mostrar el PDF en el navegador utilizando la URL generada
-  // window.open(url); helllooooooooooooo
+  window.open(url); 
 }
