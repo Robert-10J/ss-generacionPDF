@@ -1,25 +1,15 @@
 import axios from 'axios'
 
 const URLS = {
+  test: 'http://localhost:8000/alumnos',
   urlApiAlumnos: import.meta.env.VITE_URL_API,
-  urlApiPlantillas: import.meta.env.VITE_URL_API_PDF
+  urlApiPlantillas: import.meta.env.VITE_URL_API_PDF,
 }
 
 export function obtenerAlumnos() {
-/*   try {
-    const response = await axios.get(import.meta.env.VITE_URL_API)
-    return response.data
-  } catch (error) {
-    console.error(error)
-  } */
-
-  axios.get(URLS.urlApiAlumnos)
-    .then( response => {
-      console.log(response.data)
-    })
-    .catch( error => {
-      console.error(error)
-    })
+  return axios.get(URLS.test)
+    .then( response => { return response.data })
+    .catch( error => { console.error(error) })
 }
 
 export function getPDF() {  

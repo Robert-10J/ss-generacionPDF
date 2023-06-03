@@ -1,0 +1,83 @@
+{
+  "alumnos" : [
+    {
+      "id": 7,
+      "nombre": "Brayan",
+      "apellidopaterno": "Constantine",
+      "apellidomaterno": "Bejia",
+      "curp": "PESA660128HGtRLL02",
+      "email": "brayan32@outlook.com",
+      "NumeroControl": "M21322002",
+      "alumnosemestre": "1 semestre",
+      "Usuario": {
+        "name": "BRAYAN",
+        "id": 9
+      },
+      "generacion": "Agosto --- 2021",
+      "Programa": 2,
+      "alumnodesignacion": [
+        {
+          "id": 3,
+          "Cargo_id": 1,
+          "Cargo__cargo": "Director.",
+          "Docente_id": 1,
+          "Docente_nombre": "Luis alberto lorenzo Lorenzo"
+        },
+        {
+          "id": 2,
+          "Cargo_id": 3,
+          "Cargo__cargo": "Tutor",
+          "Docente_id": 2,
+          "Docente_nombre": "brayan heranades mejia"
+        },
+        {
+          "id": 4,
+          "Cargo_id": 2,
+          "Cargo__cargo": "Coodirector",
+          "Docente_id": 3,
+          "Docente_nombre": "Juan Miguel Hernández Hernandez"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nombre": "Samuel",
+      "apellidopaterno": "Peralta",
+      "apellidomaterno": "Arechiga",
+      "curp": "PEAS950805HGRRRM01",
+      "email": "samuelitmx95gh@gmail.com",
+      "NumeroControl": "M21320020",
+      "alumnosemestre": "1 semestre",
+      "Usuario": {
+        "name": "Archer95",
+        "id": 8
+      },
+      "generacion": "Agosto --- 2022",
+      "Programa": 2,
+      "alumnodesignacion": [
+        {
+          "id": 1,
+          "Cargo_id": 1,
+          "Cargo__cargo": "Director.",
+          "Docente_id": 1,
+          "Docente_nombre": "Luis alberto lorenzo Lorenzo"
+        },
+        {
+          "id": 5,
+          "Cargo_id": 2,
+          "Cargo__cargo": "Coodirector",
+          "Docente_id": 2,
+          "Docente_nombre": "brayan heranades mejia"
+        },
+        {
+          "id": 6,
+          "Cargo_id": 3,
+          "Cargo__cargo": "Tutor",
+          "Docente_id": 3,
+          "Docente_nombre": "Juan Miguel Hernández Hernandez"
+        }
+      ]
+    }
+  ]
+}
+  
