@@ -1,15 +1,16 @@
-/* import { modifyPDF } from './utils/pdf' */
+import { PDFViewer } from '@react-pdf/renderer'
 import Tabla from './components/Tabla'
-/* import { getPDF } from './services/peticiones' */
+import Plantilla from './components/pdf/Plantilla'
 
 const App = () => {   
   return (
-    <>
+    <main className='grid grid-cols-2'>
       <Tabla/>
 
-      {/* <button onClick={ () => modifyPDF() }>PDF</button> */}
-      {/* <button onClick={ () => getPDF() }>PDF</button> */}
-    </>
+      <PDFViewer className='w-full h-screen'>
+        <Plantilla/>
+      </PDFViewer>
+    </main>
   )
 }
 
