@@ -13,11 +13,11 @@ const styles = StyleSheet.create({
 });
 
 // Create Document Component
-const Plantilla = () => (
+const Plantilla = ({ idAlumno }) => (
   <Document>
     <Page size="LETTER" style={styles.page}>
       <Encabezado/>
-      <Cuerpo/>
+      <Cuerpo idAlumno={idAlumno} />
       <PiePagina/>
     </Page>
   </Document>

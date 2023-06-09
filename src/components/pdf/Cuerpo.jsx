@@ -1,10 +1,10 @@
 import { Text, View } from '@react-pdf/renderer'
 
-const Cuerpo = () => {
+const Cuerpo = ({ idAlumno }) => {
   return (
     <View>
       <Text>
-        Cuerpoooooo
+        Cuerpoooooo { idAlumno }
       </Text>
     </View>
   )
