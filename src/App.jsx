@@ -1,5 +1,6 @@
 import Tabla from './components/Tabla'
 
+
 const App = () => {   
   return (
     <>
