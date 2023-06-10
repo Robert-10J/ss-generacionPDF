@@ -15,18 +15,19 @@ const styles = StyleSheet.create({
   section: {
     backgroundColor: '#92f31f',
     width: '100%',
-    height: '0.551181in', // medida del documento de cm a pulgadas
+    height: '0.851181in', // medida del documento de cm a pulgadas
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   sectionLogos: {
     display: 'flex',
     flexDirection:'row',
-    gap: '3'
+    gap: '3',
+    marginBottom: 15
   },
-  logo: {
-    width: '20'
-  }
+  logo: { width: '20' },
+  imgDireccion: { width: '100%', height: '200' },
+  imgPieDireccion: { width: '100%', height: '250' },
 });
 
 const PiePagina = () => {
@@ -41,8 +42,8 @@ const PiePagina = () => {
         <Image src={libre_plastico} style={styles.logo}/>
       </View>
       <View>
-        <Image src={direccion} style={styles.img}/>
-        <Image src={pie_direccion} style={styles.img}/>
+        <Image src={direccion} style={styles.imgDireccion}/>
+        <Image src={pie_direccion} style={styles.imgPieDireccion}/>
       </View>
     </View>
   )
