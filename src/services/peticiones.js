@@ -1,34 +1,14 @@
 import axios from 'axios'
 import React, {useState, useEffect} from 'react';
 
-export async function obtenerAlumnos() {
-  try {
-    const response = await axios.get(import.meta.env.VITE_URL_API)
-    return response.data
-  } catch (error) {
-    console.log(error)
-  }
+const URLS = {
+  test: 'http://localhost:8000/alumnos',
+  urlApiAlumnos: import.meta.env.VITE_URL_API,
 }
 
-const Plantilla = () => {
-  const [documentContent, setDocumentContent] = useState(null);
+export function obtenerAlumnos() {
+  return axios.get( URLS.urlApiAlumnos || URLS.test )
+    .then( response => { return response.data })
+    .catch( error => { console.error(error) })
+}
 
-useEffect(()=>{
-  const fetchData = async () =>{
-    try {
-      const response = await axios.get('',{
-        responseType: 'blob',
-      });
-      const blob = new Blob([response.data],{type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
-        const fileReader = new FileReader();
-        fileReader.onload = (event) => {
-          const arrayBuffer = event.target.result;
-          setDocumentContent('Documento procesado correctamente');
-        };
-          fileReader.readAsArrayBuffer(blob);
-      }catch(eror){
-
-      }
-    };
-    fetchData();
-  },[]);

@@ -17,10 +17,13 @@ const FilaAlumno = () => {
   return (
     <>
       { 
-        alumnos.map( alumno => (
+        alumnos?.map( alumno => (
           <tr key={alumno.id} className='mt-10'>
             <td>{alumno.id}</td>
             <td>{alumno.nombre}</td>
+            <td>{alumno.email}</td>
+            <td>{alumno.Usuario.name}</td>
+            <td>{alumno.NumeroControl}</td>
             <td>
               <GenerarPDF
                 idAlumno={alumno.id}

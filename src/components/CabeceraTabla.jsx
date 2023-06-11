@@ -3,10 +3,10 @@ import { HEADERS_TABLA } from '../consts.js'
 const CabeceraTabla = () => {
   const headers = Object.values(HEADERS_TABLA)
   return (
-    <tr>
+    <tr className='bg-gray-300'>
       {            
         headers.map((header, index) => (
-          <th key={index}>{header}</th>
+          <th key={index} className='p-2'>{header}</th>
         ))
       }
     </tr>

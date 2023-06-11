@@ -1,11 +1,20 @@
+import { PDFDownloadLink } from '@react-pdf/renderer'
+import Plantilla from './pdf/Plantilla'
+
 const GenerarPDF = ({ idAlumno }) => {
   return (
-    <button 
-      className='py-2 px-5 bg-blue-400 rounded-md uppercase font-bold'
-      onClick={()  => console.log('imprimiendo', idAlumno)}
-    >
-      Imprimir
-    </button>
+    <PDFDownloadLink 
+      document={
+        <Plantilla
+          idAlumno={idAlumno}
+        />
+      } 
+      fileName={`doc-${idAlumno}.pdf`}>
+      {
+        ({ loading }) => 
+          loading ? 'Loading doc' : 'Download now'
+      }
+    </PDFDownloadLink>
   )
 }
 
