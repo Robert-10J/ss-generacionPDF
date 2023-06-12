@@ -6,7 +6,6 @@ import ita from './assets/img/ita.png'
 
 const styles = StyleSheet.create({
   section: {
-    backgroundColor: '#14caef', 
     width: '100%', 
     height: '2.24409in', // medida del documento de cm a pulgadas
   },

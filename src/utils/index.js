@@ -6,9 +6,6 @@ export function fecha() {
 
   let fechaFormato = ''
 
-  if (mes < 10) {
-    console.log( typeof `${dia}/0${mes}/${year}`)
-  } else {
-    console.log(`${dia}/${mes}/${year}`)
-  }
+  if (mes < 10) return fechaFormato = `${dia}/0${mes}/${year}`
+  return fechaFormato = `${dia}/${mes}/${year}`
 }
