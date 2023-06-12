@@ -8,7 +8,12 @@ const styles = StyleSheet.create({
   page: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#E4E4E4'
+    backgroundColor: '#ffff',
+    marginTop: '0.16in',
+    marginLeft: '0.78in',
+    marginBottom: '0.78in',
+    marginRight: '0.78in',
+    
   }
 });
 

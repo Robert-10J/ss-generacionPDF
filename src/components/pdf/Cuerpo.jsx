@@ -4,6 +4,7 @@ import FontMontserratExtraBold from './assets/fonts/Montserrat-ExtraBold.ttf';
 import FontMontserratExtraLight from './assets/fonts/Montserrat-ExtraLight.ttf';
 import FontMontserratMedium from './assets/fonts/Montserrat-Medium.ttf';
 import FontMontserratRegular from './assets/fonts/Montserrat-Regular.ttf';
+import FontMontserratExtraLightItalic from './assets/fonts/Montserrat-ExtraLightItalic.ttf';
 
 Font.register({family: 'Montserrat', fonts: [
   {
@@ -19,6 +20,10 @@ Font.register({family: 'Montserrat', fonts: [
   },
   {
     src: FontMontserratRegular
+  },
+  {
+    src: FontMontserratExtraLightItalic,
+    fontStyle: 'italic',
   }
 ]})
 
@@ -43,9 +48,6 @@ const styles = StyleSheet.create({
     fontWeight: 'medium',
     fontSize: '8'
   },
-  section: {
-   margin: '20 10 20 10',
-  },
   cuerpo: {
     textAlign: 'justify',
     fontFamily: 'Montserrat',
@@ -57,7 +59,7 @@ const styles = StyleSheet.create({
 
 const Cuerpo = ({ idAlumno }) => {
   return (
-    <View style={styles.section}>
+    <View>
 
       <View style={styles.textR}>
         <Text style={{fontFamily:'Montserrat', fontWeight:'bold'}}>Instituto Tecnológico de Acapulco</Text>
@@ -86,8 +88,8 @@ const Cuerpo = ({ idAlumno }) => {
 
       <View style={styles.textoLeft}>
         <Text style={styles.textoUpper}>Atentamente</Text>
-        <Text style={{fontFamily: 'Montserrat', fontWeight:'ultralight', fontSize:'8'}}>Excelencia en Educación Tecnológica</Text>
-        <Text style={{fontFamily: 'Montserrat', fontWeight:'ultralight', fontSize:'7'}}>Educación Tecnológica con Compromiso Social</Text>
+        <Text style={{fontFamily: 'Montserrat', fontWeight:'ultralight', fontSize:'8', fontStyle: 'italic'}}>Excelencia en Educación Tecnológica</Text>
+        <Text style={{fontFamily: 'Montserrat', fontWeight:'ultralight', fontSize:'7', fontStyle: 'italic'}}>Educación Tecnológica con Compromiso Social</Text>
       </View>
 
       <View style={styles.textoLeft}>
