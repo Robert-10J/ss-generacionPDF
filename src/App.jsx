@@ -1,8 +1,9 @@
 import { PDFViewer } from '@react-pdf/renderer'
 import Tabla from './components/Tabla'
 import Plantilla from './components/pdf/Plantilla'
+import { fecha } from './utils'
 
-const App = () => {   
+const App = () => {     
   return (
     <main className='grid md:grid-cols-2'>
       <Tabla/>
@@ -10,6 +11,9 @@ const App = () => {
       <PDFViewer className='w-full h-screen'>
         <Plantilla/>
       </PDFViewer>
+      {
+        fecha()
+      }
     </main>
   )
 }
