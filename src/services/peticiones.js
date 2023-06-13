@@ -1,5 +1,4 @@
 import axios from 'axios'
-import React, {useState, useEffect} from 'react';
 
 const URLS = {
   test: 'http://localhost:8000/alumnos',
