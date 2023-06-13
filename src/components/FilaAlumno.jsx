@@ -4,12 +4,11 @@ import { obtenerAlumnos } from '../services/peticiones'
 
 const FilaAlumno = () => {
   const [alumnos, setAlumnos] = useState([])
+  
   useEffect(() => {
-    const getAlumnos = async () => {
-      const alumnos = await obtenerAlumnos()
-      setAlumnos(alumnos)
-    }
-    getAlumnos()
+    obtenerAlumnos()
+      .then( alumnos => { setAlumnos(alumnos) } )
+      .catch( err => { console.error(err) } )
   }, [])
 
   return (

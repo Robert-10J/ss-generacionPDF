@@ -2,7 +2,6 @@ import { View, Image, StyleSheet } from '@react-pdf/renderer'
 
 // Imagenes 
 import educacion from './assets/img/educacion.png'
-import ita from './assets/img/ita.png'
 
 const styles = StyleSheet.create({
   section: {
@@ -16,7 +15,6 @@ const Encabezado = () => {
   return (
     <View style={styles.section}>
       <Image src={educacion} style={styles.imgEducacion} />
-      <Image src={ita} style={styles.imgDepartamento}/>
     </View>
   )
 }

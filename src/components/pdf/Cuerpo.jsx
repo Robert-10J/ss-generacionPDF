@@ -15,8 +15,7 @@ Font.register({family: 'Montserrat', fonts: [
     src: extraLight, 
     fontWeight: 'ultralight',
   },
-  { src: medium },
-  { src: regular },
+  { src: medium }, { src: regular },
   {
     src: extraLightItalic,
     fontStyle: 'italic',
