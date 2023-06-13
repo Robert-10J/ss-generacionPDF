@@ -9,20 +9,22 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: '#ffff',
-    marginTop: '0.16in',
-    marginLeft: '0.78in',
-    marginBottom: '0.78in',
-    marginRight: '0.78in',
-    
+    /* marginTop: '0.1653543in',
+    marginLeft: '0.984252in',
+    marginBottom: '0.787402in',
+    marginRight: '0.787402in',  */
   }
 });
 
 // Create Document Component
-const Plantilla = ({ idAlumno }) => (
+const Plantilla = ({ idAlumno, nombre }) => (
   <Document>
     <Page size="LETTER" style={styles.page}>
       <Encabezado/>
-      <Cuerpo idAlumno={idAlumno} />
+      <Cuerpo 
+        idAlumno={idAlumno} 
+        nombre={nombre}
+      />
       <PiePagina/>
     </Page>
   </Document>

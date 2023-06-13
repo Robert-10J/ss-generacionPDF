@@ -3,9 +3,7 @@ import GenerarPDF from './GenerarPDF'
 import { obtenerAlumnos } from '../services/peticiones'
 
 const FilaAlumno = () => {
-
   const [alumnos, setAlumnos] = useState([])
-
   useEffect(() => {
     const getAlumnos = async () => {
       const alumnos = await obtenerAlumnos()
@@ -27,6 +25,7 @@ const FilaAlumno = () => {
             <td>
               <GenerarPDF
                 idAlumno={alumno.id}
+                nombre={alumno.nombre}
               />
             </td>
           </tr>
