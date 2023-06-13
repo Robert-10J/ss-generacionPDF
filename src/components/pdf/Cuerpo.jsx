@@ -37,13 +37,15 @@ const styles = StyleSheet.create({
   },
   textR: {
     textAlign: 'right',
-    padding: '20px',
+    paddingBottom: '20px',
+    paddingTop: '20px',
     fontFamily: 'Montserrat',
     fontWeight: 'medium',
     fontSize: '9',
   },
   textoLeft: {
-    padding: '15px',
+    paddingBottom: '20px',
+    paddingTop: '20px',
     fontFamily: 'Montserrat',
     fontWeight: 'medium',
     fontSize: '8'
