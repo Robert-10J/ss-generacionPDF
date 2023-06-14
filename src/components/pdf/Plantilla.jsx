@@ -9,11 +9,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     backgroundColor: '#ffff',
-    marginTop: '0.1653543in',
+    /* marginTop: '0.1653543in',
     marginLeft: '0.984252in',
     marginBottom: '0.787402in',
-    marginRight: '0.787402in',
-    
+    marginRight: '0.787402in',  */
   }
 });
 

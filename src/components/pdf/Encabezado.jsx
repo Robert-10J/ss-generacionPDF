@@ -5,8 +5,10 @@ import educacion from './assets/img/educacion.png'
 
 const styles = StyleSheet.create({
   section: {
-    width: '100%', 
+    //width: '100%', 
     height: '2.24409in', // medida del documento de cm a pulgadas
+    marginLeft: '0.984252in',
+    marginRight: '0.787402in', 
   },
   imgEducacion: { width: '280', marginTop: '50', marginLeft: '50' },
 });
