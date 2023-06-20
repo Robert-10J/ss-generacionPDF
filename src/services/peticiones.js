@@ -6,7 +6,7 @@ const URLS = {
 }
 
 export function obtenerAlumnos() {
-  return axios.get( URLS.urlApiAlumnos || URLS.test )
+  return axios.get( URLS.test )
     .then( response => { return response.data })
     .catch( error => { console.error(error) })
 }

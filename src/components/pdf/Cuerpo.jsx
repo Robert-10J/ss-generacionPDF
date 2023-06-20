@@ -60,7 +60,12 @@ const styles = StyleSheet.create({
   }
 });
 
-const Cuerpo = ({ idAlumno, nombre }) => {
+const Cuerpo = ({ alumno }) => {
+
+  const { nombre, apellidopaterno, apellidomaterno, NumeroControl } = alumno
+  /* const { nombre, apellidopaterno, apellidomaterno, NumeroControl } = alumno
+
+  console.log(nombre, apellidopaterno, apellidomaterno, NumeroControl) */
 
   const fecha1 = fecha();
 
@@ -85,7 +90,7 @@ const Cuerpo = ({ idAlumno, nombre }) => {
       <View style={styles.textoLeft}>
         <Text style={styles.cuerpo}>
         El que suscribe, Jefa de División de Estudio de Posgrado e Investigación de este Instituto Tecnologico de Acapulco, hace CONSTAR que 
-        la o el C. CORTÉS BÁRCENAS YARELI{ nombre } con numero de control M22320006{ idAlumno } esta ACEPTADO (A) como estudiante de la Maestria en Sistemas Computacionales del 
+        la o el C. { nombre } { apellidopaterno } {} con numero de control { } esta ACEPTADO (A) como estudiante de la Maestria en Sistemas Computacionales del 
         TecNM Campus Acapulco con numero de registro 5418 en el Sistema Nacional de Posgrado antes PNPC en modolidad presencial dado que ha 
         logrado pasar con exito los criterios de seleccion de la convocatoria de nuevo ingreso 2023.
         </Text>

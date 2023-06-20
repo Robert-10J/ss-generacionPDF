@@ -1,8 +1,7 @@
 export const HEADERS_TABLA = {
-  id: 'ID',
+  noControl: 'N° CONTROL',
   nombre: 'NOMBRE',
   email: 'EMAIL',
   usuario: 'USUARIO',
-  noControl: 'N° CONTROL',
   acciones: 'ACCIONES'
 }

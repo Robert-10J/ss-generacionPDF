@@ -3,8 +3,8 @@ import GenerarPDF from './GenerarPDF'
 import { obtenerAlumnos } from '../services/peticiones'
 
 const FilaAlumno = () => {
-  const [alumnos, setAlumnos] = useState([])
-  
+  const [alumnos, setAlumnos] = useState([])  
+
   useEffect(() => {
     obtenerAlumnos()
       .then( alumnos => { setAlumnos(alumnos) } )
@@ -15,16 +15,15 @@ const FilaAlumno = () => {
     <>
       { 
         alumnos?.map( alumno => (
-          <tr key={alumno.id} className='mt-10'>
-            <td>{alumno.id}</td>
+          <tr key={alumno.id}>
+            <td>{alumno.NumeroControl}</td>
             <td>{alumno.nombre}</td>
             <td>{alumno.email}</td>
             <td>{alumno.Usuario.name}</td>
-            <td>{alumno.NumeroControl}</td>
             <td>
               <GenerarPDF
-                idAlumno={alumno.id}
-                nombre={alumno.nombre}
+                key={alumno.id}
+                alumno={alumno}
               />
             </td>
           </tr>

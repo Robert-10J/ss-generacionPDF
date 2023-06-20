@@ -17,17 +17,16 @@ const styles = StyleSheet.create({
 });
 
 // Create Document Component
-const Plantilla = ({ idAlumno, nombre }) => (
-  <Document>
-    <Page size="LETTER" style={styles.page}>
-      <Encabezado/>
-      <Cuerpo 
-        idAlumno={idAlumno} 
-        nombre={nombre}
-      />
-      <PiePagina/>
-    </Page>
-  </Document>
-);
+const Plantilla = ({ alumno }) => {
+  return (
+    <Document>
+      <Page size="LETTER" style={styles.page}>
+        <Encabezado/>
+        <Cuerpo alumno={alumno} />
+        <PiePagina/>
+      </Page>
+    </Document>
+  )
+}
 
 export default Plantilla
