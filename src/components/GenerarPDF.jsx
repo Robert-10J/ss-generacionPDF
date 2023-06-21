@@ -4,8 +4,6 @@ import Plantilla from './pdf/Plantilla'
 import { obtenerAlumno } from '../utils'
 
 const GenerarPDF = ({ alumno }) => {
-
-  console.log(alumno)
   /* const { nombre, apellidopaterno, apellidomaterno, NumeroControl } = alumno
   console.log(nombre, apellidopaterno, apellidomaterno, NumeroControl) */
 
@@ -19,7 +17,7 @@ const GenerarPDF = ({ alumno }) => {
   return (
     <button>
       <PDFDownloadLink
-        document={ <Plantilla alumno={alumno}/> } 
+        document={ <Plantilla/> } 
         fileName={`Carta-Aceptacion.pdf`}>
         {
           ({ loading }) =>   

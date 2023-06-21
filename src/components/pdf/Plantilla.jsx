@@ -17,12 +17,12 @@ const styles = StyleSheet.create({
 });
 
 // Create Document Component
-const Plantilla = ({ alumno }) => {
+const Plantilla = ({ children }) => {
   return (
     <Document>
       <Page size="LETTER" style={styles.page}>
         <Encabezado/>
-        <Cuerpo alumno={alumno} />
+
         <PiePagina/>
       </Page>
     </Document>
