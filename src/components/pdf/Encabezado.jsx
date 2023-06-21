@@ -13,6 +13,10 @@ const styles = StyleSheet.create({
   imgEducacion: { width: '280', marginTop: '50', marginLeft: '50' },
 });
 
+/**
+ *  @returns Componente para el encabezdo del document
+ */
+
 const Encabezado = () => {
   return (
     <View style={styles.section}>

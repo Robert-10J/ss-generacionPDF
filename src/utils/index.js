@@ -1,6 +1,9 @@
-/**  
-* @return {string} formato de fecha d/m/a para la plantilla del documento
-*/
+/**
+ * Obtiene la fecha actual en formato dd/mm/yyyy.
+ * @returns {Object} Objeto con la fecha formateada y el año actual.
+ * @property {string} fechaFormato - La fecha actual en formato dd/mm/yyyy.
+ * @property {number} year - El año actual.
+ */
 export function fecha() {
   let fecha = new Date()
   let dia = fecha.getDate()
@@ -9,8 +12,13 @@ export function fecha() {
 
   let fechaFormato = ''
 
-  if (mes < 10) return fechaFormato = `${dia}/0${mes}/${year}`
-  return fechaFormato = `${dia}/${mes}/${year}`
+  if (mes < 10) fechaFormato = `${dia}/0${mes}/${year}`;
+  else  fechaFormato = `${dia}/${mes}/${year}`; 
+  
+  return {
+    fechaFormato, 
+    year
+  }
 }
 
 /** 

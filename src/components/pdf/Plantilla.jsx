@@ -1,7 +1,6 @@
-import { Page, Document, StyleSheet } from '@react-pdf/renderer';
-import Encabezado from './Encabezado';
-import PiePagina from './PiePagina';
-import Cuerpo from './Cuerpo';
+import { Page, Document, StyleSheet } from '@react-pdf/renderer'
+import Encabezado from './Encabezado'
+import PiePagina from './PiePagina'
 
 // Create styles
 const styles = StyleSheet.create({
@@ -15,6 +14,10 @@ const styles = StyleSheet.create({
     marginRight: '0.787402in',  */
   }
 });
+
+/**
+ *  @returns Componente principal donde se "llaman" los componentes del documento
+ */
 
 // Create Document Component
 const Plantilla = ({ children }) => {

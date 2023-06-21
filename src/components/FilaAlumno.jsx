@@ -2,6 +2,12 @@ import { useEffect, useState } from 'react'
 import GenerarPDF from './GenerarPDF'
 import { obtenerAlumnos } from '../services/peticiones'
 
+/**
+ *  @returns Obteniendo la informacion de los alumnos la API 
+ * 
+ * 
+ */
+
 const FilaAlumno = () => {
   const [alumnos, setAlumnos] = useState([])  
 

@@ -1,7 +1,6 @@
 import { PDFDownloadLink } from '@react-pdf/renderer'
 import { useState, useEffect } from 'react'
 import Plantilla from './pdf/Plantilla'
-import { obtenerAlumno } from '../utils'
 
 const GenerarPDF = ({ alumno }) => {
   /* const { nombre, apellidopaterno, apellidomaterno, NumeroControl } = alumno
