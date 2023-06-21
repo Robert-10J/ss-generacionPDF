@@ -7,6 +7,7 @@ import regular from './assets/fonts/Montserrat-Regular.ttf';
 import extraLightItalic from './assets/fonts/Montserrat-ExtraLightItalic.ttf';
 
 import { fecha } from '../../utils';
+import Plantilla from './Plantilla';
 
 /**
  *  @returns Registro de fuentes para el cuerpo del document
@@ -79,49 +80,51 @@ const CartaAceptacion = () => {
   const { fechaFormato, year } = fecha();
 
   return (
-    <View style={styles.fuente}>
-      <View style={styles.textR}>
-        <Text style={{fontWeight:'bold'}}>Instituto Tecnológico de Acapulco</Text>
-        <Text>División de Estudio de posgrado e Investigación</Text>
-      </View>
+    <Plantilla>
+      <View style={styles.fuente}>
+        <View style={styles.textR}>
+          <Text style={{fontWeight:'bold'}}>Instituto Tecnológico de Acapulco</Text>
+          <Text>División de Estudio de posgrado e Investigación</Text>
+        </View>
 
-      <View style={styles.textR}>
-        <Text>Acapulco, Guerrero, {fechaFormato}</Text>
-        <Text>CyD/000/2022</Text>
-        <Text style={styles.textoUpper}>Asunto: Carta de Aceptación{}</Text>
-      </View>
-      
-      <View style={styles.textoLeft}>
-       <Text style={styles.textoUpper}>A quien corresponda</Text>
-        <Text style={styles.textoUpper}>Presente</Text>
-      </View>
+        <View style={styles.textR}>
+          <Text>Acapulco, Guerrero, {fechaFormato}</Text>
+          <Text>CyD/000/2022</Text>
+          <Text style={styles.textoUpper}>Asunto: Carta de Aceptación{}</Text>
+        </View>
+        
+        <View style={styles.textoLeft}>
+        <Text style={styles.textoUpper}>A quien corresponda</Text>
+          <Text style={styles.textoUpper}>Presente</Text>
+        </View>
 
-      <View style={styles.textoLeft}>
-        <Text style={styles.cuerpo}>
-        El que suscribe, Jefa de División de Estudio de Posgrado e Investigación de este Instituto Tecnologico de Acapulco, hace CONSTAR que 
-        la o el C. { } con número de control { } esta ACEPTADO (A) como estudiante de la Maestria en Sistemas Computacionales del 
-        TecNM Campus Acapulco con numero de registro { } en el Sistema Nacional de Posgrado antes PNPC en modalidad presencial dado que ha 
-        logrado pasar con exito los criterios de seleccion de la convocatoria de nuevo ingreso {year}.
-        </Text>
-      </View>
+        <View style={styles.textoLeft}>
+          <Text style={styles.cuerpo}>
+          El que suscribe, Jefa de División de Estudio de Posgrado e Investigación de este Instituto Tecnologico de Acapulco, hace CONSTAR que 
+          la o el C. { } con número de control { } esta ACEPTADO (A) como estudiante de la Maestria en Sistemas Computacionales del 
+          TecNM Campus Acapulco con numero de registro { } en el Sistema Nacional de Posgrado antes PNPC en modalidad presencial dado que ha 
+          logrado pasar con exito los criterios de seleccion de la convocatoria de nuevo ingreso {year}.
+          </Text>
+        </View>
 
-      <View style={styles.textoLeft}>
-        <Text style={styles.textoUpper}>A t e n t a m e n t e</Text>
-        <Text style={{...styles.textUltraLight,fontSize:'8'}}>Excelencia en Educación Tecnológica	&reg;</Text>
-        <Text style={{...styles.textUltraLight,fontSize:'7'}}>Educación Tecnológica con Compromiso Social</Text>
-      </View>
+        <View style={styles.textoLeft}>
+          <Text style={styles.textoUpper}>A t e n t a m e n t e</Text>
+          <Text style={{...styles.textUltraLight,fontSize:'8'}}>Excelencia en Educación Tecnológica	&reg;</Text>
+          <Text style={{...styles.textUltraLight,fontSize:'7'}}>Educación Tecnológica con Compromiso Social</Text>
+        </View>
 
-      <View style={styles.textoLeft}>
-        <Text style={styles.textoUpper}>Jazmín Carbajal Ávila { }</Text>
-        <Text style={styles.textoUpper}>Jefa de la división de estudios de posgrado e investigación</Text>
-      </View>
+        <View style={styles.textoLeft}>
+          <Text style={styles.textoUpper}>Jazmín Carbajal Ávila { }</Text>
+          <Text style={styles.textoUpper}>Jefa de la división de estudios de posgrado e investigación</Text>
+        </View>
 
-      <View style={styles.textoLeft}> 
-        <Text>ccp. Interesado</Text>
-        <Text>JCA/acdv</Text>
-      </View>
+        <View style={styles.textoLeft}> 
+          <Text>ccp. Interesado</Text>
+          <Text>JCA/acdv</Text>
+        </View>
 
-    </View>
+      </View>
+    </Plantilla>
   )
 }
 

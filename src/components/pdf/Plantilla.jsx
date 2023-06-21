@@ -27,11 +27,10 @@ const Plantilla = ({ children }) => {
     <Document>
       <Page size="LETTER" style={styles.page}>
         <Encabezado/>
-
+           {children}
         <PiePagina/>
       </Page>
     </Document>
   )
 }
-
 export default Plantilla
