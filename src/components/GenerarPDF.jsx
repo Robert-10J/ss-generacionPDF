@@ -1,6 +1,12 @@
 import { PDFDownloadLink } from '@react-pdf/renderer'
 import Plantilla from './pdf/Plantilla'
 
+/**
+ *  @returns Generación del documento
+ * 
+ * 
+ */
+
 const GenerarPDF = ({ idAlumno, nombre }) => {
   return (
     <PDFDownloadLink 

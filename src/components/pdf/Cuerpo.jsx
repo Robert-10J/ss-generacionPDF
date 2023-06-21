@@ -7,6 +7,12 @@ import regular from './assets/fonts/Montserrat-Regular.ttf';
 import extraLightItalic from './assets/fonts/Montserrat-ExtraLightItalic.ttf';
 import { fecha } from '../../utils';
 
+/**
+ *  @returns Registro de fuentes para el cuerpo del document
+ * 
+ * 
+ */
+
 Font.register({family: 'Montserrat', fonts: [
   {
     src: extraBold, 
@@ -23,6 +29,12 @@ Font.register({family: 'Montserrat', fonts: [
     fontStyle: 'italic',
   }
 ]})
+
+/**
+ *  @returns Estilos para el cuerpo del document
+ * 
+ * 
+ */
 
 const styles = StyleSheet.create({
   fuente: { 
@@ -61,6 +73,12 @@ const styles = StyleSheet.create({
   }
 });
 
+/**
+ *  @returns Componente para cuerpo del document
+ * 
+ * 
+ */
+
 const Cuerpo = ({ idAlumno, nombre }) => {
 
   const fecha1 = fecha();
@@ -73,7 +91,7 @@ const Cuerpo = ({ idAlumno, nombre }) => {
       </View>
 
       <View style={styles.textR}>
-        <Text>Acapulco, Guerrero, {fecha1}</Text>
+        <Text>Acapulco, Guerrero, {fecha1.fecha}</Text>
         <Text>CyD/000/2022</Text>
         <Text style={styles.textoUpper}>Asunto: Carta de Aceptación{}</Text>
       </View>
@@ -87,14 +105,14 @@ const Cuerpo = ({ idAlumno, nombre }) => {
         <Text style={styles.cuerpo}>
         El que suscribe, Jefa de División de Estudio de Posgrado e Investigación de este Instituto Tecnologico de Acapulco, hace CONSTAR que 
         la o el C. CORTÉS BÁRCENAS YARELI{ nombre } con numero de control M22320006{ idAlumno } esta ACEPTADO (A) como estudiante de la Maestria en Sistemas Computacionales del 
-        TecNM Campus Acapulco con numero de registro 5418 en el Sistema Nacional de Posgrado antes PNPC en modolidad presencial dado que ha 
-        logrado pasar con exito los criterios de seleccion de la convocatoria de nuevo ingreso 2023.
+        TecNM Campus Acapulco con numero de registro 5418 en el Sistema Nacional de Posgrado antes PNPC en modalidad presencial dado que ha 
+        logrado pasar con exito los criterios de seleccion de la convocatoria de nuevo ingreso {fecha1.year}.
         </Text>
       </View>
 
       <View style={styles.textoLeft}>
         <Text style={styles.textoUpper}>A t e n t a m e n t e</Text>
-        <Text style={{...styles.textUltraLight,fontSize:'8'}}>Excelencia en Educación Tecnológica</Text>
+        <Text style={{...styles.textUltraLight,fontSize:'8'}}>Excelencia en Educación Tecnológica	&reg;</Text>
         <Text style={{...styles.textUltraLight,fontSize:'7'}}>Educación Tecnológica con Compromiso Social</Text>
       </View>
 

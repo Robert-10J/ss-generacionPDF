@@ -6,6 +6,12 @@ export function fecha() {
 
   let fechaFormato = ''
 
-  if (mes < 10) return fechaFormato = `${dia}/0${mes}/${year}`
-  return fechaFormato = `${dia}/${mes}/${year}`
+  if (mes < 10) fechaFormato = `${dia}/0${mes}/${year}`;
+  else  fechaFormato = `${dia}/${mes}/${year}`; 
+
+  return {
+    fecha: fechaFormato, 
+    year
+  }
 }
+

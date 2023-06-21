@@ -16,6 +16,12 @@ const styles = StyleSheet.create({
   }
 });
 
+/**
+ *  @returns Componente principal donde se "llaman" los componentes del documento
+ * 
+ * 
+ */
+
 // Create Document Component
 const Plantilla = ({ idAlumno, nombre }) => (
   <Document>

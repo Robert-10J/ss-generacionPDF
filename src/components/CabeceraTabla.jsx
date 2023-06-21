@@ -1,5 +1,11 @@
 import { HEADERS_TABLA } from '../consts.js'
 
+/**
+ *  @returns Creando la cabecera de la Tabla donde se renderizan los datos 
+ * 
+ * 
+ */
+
 const CabeceraTabla = () => {
   const headers = Object.values(HEADERS_TABLA)
   return (

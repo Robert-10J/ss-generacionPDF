@@ -4,6 +4,12 @@ import { View, Image, StyleSheet } from '@react-pdf/renderer'
 import educacion from './assets/img/educacion.png'
 import ita from './assets/img/ita.png'
 
+/**
+ *  @returns Estilos del encabezado del documento
+ * 
+ * 
+ */
+
 const styles = StyleSheet.create({
   section: {
     //width: '100%', 
@@ -13,6 +19,12 @@ const styles = StyleSheet.create({
   },
   imgEducacion: { width: '280', marginTop: '50', marginLeft: '50' },
 });
+
+/**
+ *  @returns Componente para el encabezdo del document
+ * 
+ * 
+ */
 
 const Encabezado = () => {
   return (
