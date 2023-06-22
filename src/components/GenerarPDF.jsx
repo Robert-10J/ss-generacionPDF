@@ -2,18 +2,17 @@ import { PDFDownloadLink } from '@react-pdf/renderer'
 import CartaAceptacion from './pdf/CartaAceptación'
 
 const GenerarPDF = ({ nombre, apellidoPaterno, apellidoMaterno, numeroControl }) => {
-
   return (
     <PDFDownloadLink
       document={ 
-        <CartaAceptacion
+        <CartaAceptacion          
           nombre={nombre}
           apellidoPaterno={apellidoPaterno}
           apellidoMaterno={apellidoMaterno}
           numeroControl={numeroControl}
         />
       } 
-      fileName={`Carta-Aceptacion.pdf`}>
+      fileName={`Carta-Aceptacion-${nombre}.pdf`}>
       {
         ({ loading }) =>   
           loading ? 'Loading doc' : 'Download now'

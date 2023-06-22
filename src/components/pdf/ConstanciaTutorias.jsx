@@ -8,6 +8,7 @@ import extraLightItalic from './assets/fonts/Montserrat-ExtraLightItalic.ttf';
 
 import { fecha } from '../../utils';
 import Plantilla from './Plantilla';
+import Tabla from '../Tabla';
 
 const { fechaFormato, year } = fecha();
 
@@ -61,7 +62,7 @@ export const ConstanciaTutorias = () => {
         </View>
            
         <View>
-             TABLA
+          <Tabla/>
         </View>
 
         <View>
@@ -82,19 +83,7 @@ export const ConstanciaTutorias = () => {
           </View>
 
         </View>
-
-
-
-
-
-
-
       </View>
-
-
-
-
-
     </Plantilla>
   )
 }

@@ -72,9 +72,6 @@ const styles = StyleSheet.create({
 
 const CartaAceptacion = ({ nombre, apellidoPaterno, apellidoMaterno, numeroControl }) => {
 
-  /* const { nombre, apellidopaterno, apellidomaterno, NumeroControl } = alumno
-  console.log(nombre, apellidopaterno, apellidomaterno, NumeroControl) */
-
   const { fechaFormato, year } = fecha();
 
   return (
