@@ -5,7 +5,6 @@ import { obtenerAlumnos } from '../services/peticiones'
 /**
  *  @returns Obteniendo la informacion de los alumnos la API 
  */
-
 const FilaAlumno = () => {
   const [alumnos, setAlumnos] = useState([])  
 
@@ -26,12 +25,12 @@ const FilaAlumno = () => {
             <td>{alumno.Usuario.name}</td>
             <td>
               <GenerarPDF
-                key={alumno.id}
                 nombre={alumno.nombre}
                 apellidoPaterno={alumno.apellidopaterno}
                 apellidoMaterno={alumno.apellidomaterno}
                 numeroControl={alumno.NumeroControl}
               />
+
             </td>
           </tr>
         ))
