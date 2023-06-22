@@ -6,8 +6,8 @@ import medium from './assets/fonts/Montserrat-Medium.ttf';
 import regular from './assets/fonts/Montserrat-Regular.ttf';
 import extraLightItalic from './assets/fonts/Montserrat-ExtraLightItalic.ttf';
 
-import { fecha } from '../../utils';
 import Plantilla from './Plantilla';
+import { fecha } from '../../utils';
 
 /**
  *  @returns Registro de fuentes para el cuerpo del document
@@ -70,11 +70,9 @@ const styles = StyleSheet.create({
   }
 });
 
-const CartaAceptacion = () => {
+const CartaAceptacion = ({ nombre, apellidoPaterno, apellidoMaterno, numeroControl }) => {
 
-  /* const { nombre, apellidopaterno, apellidomaterno, NumeroControl } = alumno */
   /* const { nombre, apellidopaterno, apellidomaterno, NumeroControl } = alumno
-
   console.log(nombre, apellidopaterno, apellidomaterno, NumeroControl) */
 
   const { fechaFormato, year } = fecha();
@@ -101,9 +99,9 @@ const CartaAceptacion = () => {
         <View style={styles.textoLeft}>
           <Text style={styles.cuerpo}>
           El que suscribe, Jefa de División de Estudio de Posgrado e Investigación de este Instituto Tecnologico de Acapulco, hace CONSTAR que 
-          la o el C. { } con número de control { } esta ACEPTADO (A) como estudiante de la Maestria en Sistemas Computacionales del 
-          TecNM Campus Acapulco con numero de registro { } en el Sistema Nacional de Posgrado antes PNPC en modalidad presencial dado que ha 
-          logrado pasar con exito los criterios de seleccion de la convocatoria de nuevo ingreso {year}.
+          la o el C. { nombre } { apellidoPaterno } { apellidoMaterno } con número de control { numeroControl } esta ACEPTADO (A) como estudiante de la Maestria en Sistemas Computacionales del 
+          TecNM Campus Acapulco con número de registro { } en el Sistema Nacional de Posgrado antes PNPC en modalidad presencial dado que ha 
+          logrado pasar con exito los criterios de seleccion de la convocatoria de nuevo ingreso { year }.
           </Text>
         </View>
 

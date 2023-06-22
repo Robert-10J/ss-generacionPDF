@@ -1,29 +1,24 @@
 import { PDFDownloadLink } from '@react-pdf/renderer'
-import { useState, useEffect } from 'react'
-import Plantilla from './pdf/Plantilla'
+import CartaAceptacion from './pdf/CartaAceptación'
 
-const GenerarPDF = ({ alumno }) => {
-  /* const { nombre, apellidopaterno, apellidomaterno, NumeroControl } = alumno
-  console.log(nombre, apellidopaterno, apellidomaterno, NumeroControl) */
-
-  // const [alumno, setAlumno] = useState({})
-
-  /* const handleClickAlumno = () => {
-    const datosAlumno = obtenerAlumno(idAlumno, alumnos)
-    if (Object.keys(datosAlumno).length !== 0) setAlumno(datosAlumno)
-  } */
+const GenerarPDF = ({ nombre, apellidoPaterno, apellidoMaterno, numeroControl }) => {
 
   return (
-    <button>
-      <PDFDownloadLink
-        document={ <Plantilla/> } 
-        fileName={`Carta-Aceptacion.pdf`}>
-        {
-          ({ loading }) =>   
-            loading ? 'Loading doc' : 'Download now'
-        }
-      </PDFDownloadLink>
-    </button>
+    <PDFDownloadLink
+      document={ 
+        <CartaAceptacion
+          nombre={nombre}
+          apellidoPaterno={apellidoPaterno}
+          apellidoMaterno={apellidoMaterno}
+          numeroControl={numeroControl}
+        />
+      } 
+      fileName={`Carta-Aceptacion.pdf`}>
+      {
+        ({ loading }) =>   
+          loading ? 'Loading doc' : 'Download now'
+      }
+    </PDFDownloadLink>
   )
 }
 

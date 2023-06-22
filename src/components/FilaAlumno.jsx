@@ -29,7 +29,11 @@ const FilaAlumno = () => {
             <td>
               <GenerarPDF
                 key={alumno.id}
-                alumno={alumno}
+                
+                nombre={alumno.nombre}
+                apellidoPaterno={alumno.apellidopaterno}
+                apellidoMaterno={alumno.apellidomaterno}
+                numeroControl={alumno.NumeroControl}
               />
             </td>
           </tr>

@@ -8,7 +8,7 @@ const App = () => {
     <main className='grid md:grid-cols-2'>
       <Tabla/>
       <PDFViewer className='w-full h-screen'>
-        <ConstanciaTutorias/>
+        <CartaAceptacion/>
       </PDFViewer>
     </main>
   )
