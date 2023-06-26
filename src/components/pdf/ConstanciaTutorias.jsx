@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 
 });
 
-export const ConstanciaTutorias = () => {
+const ConstanciaTutorias = () => {
   return (
     <Plantilla>
       <View style={styles.fuente}>
@@ -128,3 +128,5 @@ export const ConstanciaTutorias = () => {
     </Plantilla>
   )
 }
+
+export default ConstanciaTutorias

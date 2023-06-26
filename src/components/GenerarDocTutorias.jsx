@@ -10,7 +10,7 @@ const GenerarDocTutorias = () => {
       fileName={`Constancia-Tutorias}.pdf`}>
       {
         ({ loading }) =>
-          loading ? 'Loading doc' : 'Download now'
+          loading ? 'Loading doc' : 'Tutorias'
       }
     </PDFDownloadLink>
   )
