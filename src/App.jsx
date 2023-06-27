@@ -1,7 +1,7 @@
 import { PDFViewer } from '@react-pdf/renderer'
 import Tabla from './components/Tabla'
 import CartaAceptacion from './components/pdf/CartaAceptación'
-import { ConstanciaTutorias } from './components/pdf/ConstanciaTutorias'
+import  ConstanciaTutorias  from './components/pdf/ConstanciaTutorias'
 
 const App = () => {     
   return (

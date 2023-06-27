@@ -1,10 +1,6 @@
 import { Text, View, StyleSheet, Font } from '@react-pdf/renderer'
 
-import extraBold from './assets/fonts/Montserrat-ExtraBold.ttf';
-import extraLight  from './assets/fonts/Montserrat-ExtraLight.ttf';
-import medium from './assets/fonts/Montserrat-Medium.ttf';
-import regular from './assets/fonts/Montserrat-Regular.ttf';
-import extraLightItalic from './assets/fonts/Montserrat-ExtraLightItalic.ttf';
+import { extraBold, extraLight, medium, regular, extraLightItalic } from './assets/fonts';
 
 import { fecha } from '../../utils';
 import Plantilla from './Plantilla';

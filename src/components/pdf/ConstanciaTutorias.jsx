@@ -1,14 +1,10 @@
 import { Text, View, StyleSheet, Font } from '@react-pdf/renderer'
 
-import extraBold from './assets/fonts/Montserrat-ExtraBold.ttf';
-import extraLight  from './assets/fonts/Montserrat-ExtraLight.ttf';
-import medium from './assets/fonts/Montserrat-Medium.ttf';
-import regular from './assets/fonts/Montserrat-Regular.ttf';
-import extraLightItalic from './assets/fonts/Montserrat-ExtraLightItalic.ttf';
+import { extraBold, extraLight, medium, regular, extraLightItalic } from './assets/fonts';
 
 import { fecha } from '../../utils';
 import Plantilla from './Plantilla';
-import Tabla from '../Tabla';
+import TableTutorias from './TableTutorias';
 
 
 const { fechaFormato, year } = fecha();
@@ -84,8 +80,7 @@ const styles = StyleSheet.create({
 
 });
 
-
-export const ConstanciaTutorias = () => {
+const ConstanciaTutorias = () => {
   return (
     <Plantilla>
       <View style={styles.fuente}>
@@ -97,24 +92,24 @@ export const ConstanciaTutorias = () => {
         <View style={styles.textRight}>
           <Text>Acapulco, Guerrero, {fechaFormato}</Text>
           <Text style={styles.textoUpper}> <Text style={styles.spanText}>Oficio No.</Text> CyD/000/2022</Text>
-          <Text style={styles.textoUpper}> <Text style={styles.spanText}>Asunto:</Text> Constancia de tutorias{}</Text>
+          <Text style={styles.textoUpper}> <Text style={styles.spanText}>Asunto:</Text> Constancia de tutorias{ }</Text>
         </View>
 
         <View style={styles.cuerpo}>
-          <Text style={{...styles.textoUpper, fontWeight:'bold'}}>A quien corresponda</Text>
-          <Text style={{paddingTop:'20px'}}>Por este conducto me permito hacer <Text style={styles.spanText}>CONSTAR</Text> que el {} M.T.I Juan Miguel 
-               Hernandez Bravo fungió como <Text style={styles.spanText}>tutor</Text> en el programa de Maestría en Sistemas Computacionales 
-               como se indica a continuación: </Text>
-        </View>
-           
-        <View>
-             <Tabla/>
+          <Text style={{ ...styles.textoUpper, fontWeight: 'bold' }}>A quien corresponda</Text>
+          <Text style={{ paddingTop: '20px' }}>Por este conducto me permito hacer <Text style={styles.spanText}>CONSTAR</Text> que el { } M.T.I Juan Miguel
+            Hernandez Bravo fungió como <Text style={styles.spanText}>tutor</Text> en el programa de Maestría en Sistemas Computacionales
+            como se indica a continuación: </Text>
         </View>
 
+        <TableTutorias>
+
+        </TableTutorias>
+
         <View style={styles.texto}>
-            <Text style={{...styles.textoUpper, fontWeight:'bold', fontSize:'8'}}>A t e n t a m e n t e</Text>
-            <Text style={{...styles.textUltraLight, fontSize:'8'}}>Excelencia en Educación Tecnológica®</Text>
-            <Text style={{...styles.textUltraLight, fontSize:'7'}}>Educación Tecnológica con Compromiso Social</Text>
+          <Text style={{ ...styles.textoUpper, fontWeight: 'bold', fontSize: '8' }}>A t e n t a m e n t e</Text>
+          <Text style={{ ...styles.textUltraLight, fontSize: '8' }}>Excelencia en Educación Tecnológica®</Text>
+          <Text style={{ ...styles.textUltraLight, fontSize: '7' }}>Educación Tecnológica con Compromiso Social</Text>
         </View>
 
         <View style={styles.conteFirmas}>
@@ -124,11 +119,12 @@ export const ConstanciaTutorias = () => {
           </View>
           <View>
             <Text style={styles.nombreFirma}>Dra. Lorena Landa Habana</Text>
-            <Text style={{...styles.cargoFirma, alignSelf:'center'}}>Subdirectora Académica {'\n'} </Text>
+            <Text style={{ ...styles.cargoFirma, alignSelf: 'center' }}>Subdirectora Académica {'\n'} </Text>
           </View>
         </View>
-
       </View>
     </Plantilla>
   )
 }
+
+export default ConstanciaTutorias
