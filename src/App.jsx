@@ -1,9 +1,21 @@
 import { PDFViewer } from '@react-pdf/renderer'
 import Tabla from './components/Tabla'
+
 import CartaAceptacion from './components/pdf/CartaAceptación'
 import  ConstanciaTutorias  from './components/pdf/ConstanciaTutorias'
 
-const App = () => {     
+import { obtenerAlumnos } from './services/peticiones'
+
+const App = () => {
+  const getAlumnos = async () => {
+    const data = await obtenerAlumnos()
+    const dt = data.map(({ generacion, alumnodesignacion }) => (
+       console.log(generacion, [alumnodesignacion])
+    ))
+    
+  }
+  getAlumnos()
+  
   return (
     <main className='grid md:grid-cols-2'>
       <Tabla/>

@@ -4,8 +4,10 @@ import { extraBold, extraLight, medium, regular, extraLightItalic } from './asse
 
 import { fecha } from '../../utils';
 import Plantilla from './Plantilla';
+
 import TableTutorias from './TableTutorias';
 import pdfStyles from './pdfStyles';
+
 
 const { fechaFormato, year } = fecha();
 
@@ -24,6 +26,7 @@ Font.register({family: 'Montserrat', fonts: [
     fontStyle: 'italic',
   }
 ]});
+
 
 const ConstanciaTutorias = () => {
   return (
@@ -50,12 +53,6 @@ const ConstanciaTutorias = () => {
         <TableTutorias>
 
         </TableTutorias>
-
-        <View style={pdfStyles.texto}>
-          <Text style={[pdfStyles.textoUpper, pdfStyles.fontWeight, pdfStyles.fontSize]}>A t e n t a m e n t e</Text>
-          <Text style={[pdfStyles.textUltraLight, pdfStyles.fontSize]}>Excelencia en Educación Tecnológica®</Text>
-          <Text style={{ ...pdfStyles.textUltraLight, fontSize: '7' }}>Educación Tecnológica con Compromiso Social</Text>
-        </View>
 
         <View style={pdfStyles.conteFirmas}>
           <View>

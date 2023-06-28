@@ -2,9 +2,10 @@ import { Text, View, StyleSheet, Font } from '@react-pdf/renderer'
 
 import { extraBold, extraLight, medium, regular, extraLightItalic } from './assets/fonts';
 
-import { fecha } from '../../utils';
 import Plantilla from './Plantilla';
 import pdfStyles from './pdfStyles';
+
+import { fecha } from '../../utils';
 
 /**
  *  @returns Registro de fuentes para el cuerpo del document
@@ -30,12 +31,8 @@ Font.register({family: 'Montserrat', fonts: [
  *  @returns Estilos para el cuerpo del document
  */
 
-const CartaAceptacion = () => {
 
-  /* const { nombre, apellidopaterno, apellidomaterno, NumeroControl } = alumno */
-  /* const { nombre, apellidopaterno, apellidomaterno, NumeroControl } = alumno
-
-  console.log(nombre, apellidopaterno, apellidomaterno, NumeroControl) */
+const CartaAceptacion = ({ nombre, apellidoPaterno, apellidoMaterno, numeroControl }) => {
 
   const { fechaFormato, year } = fecha();
 
@@ -61,9 +58,9 @@ const CartaAceptacion = () => {
         <View style={pdfStyles.textoLeft}>
           <Text style={pdfStyles.cuerpo}>
           El que suscribe, Jefa de División de Estudio de Posgrado e Investigación de este Instituto Tecnologico de Acapulco, hace CONSTAR que 
-          la o el C. { } con número de control { } esta ACEPTADO (A) como estudiante de la Maestria en Sistemas Computacionales del 
-          TecNM Campus Acapulco con numero de registro { } en el Sistema Nacional de Posgrado antes PNPC en modalidad presencial dado que ha 
-          logrado pasar con exito los criterios de seleccion de la convocatoria de nuevo ingreso {year}.
+          la o el C. { nombre } { apellidoPaterno } { apellidoMaterno } con número de control { numeroControl } esta ACEPTADO (A) como estudiante de la Maestria en Sistemas Computacionales del 
+          TecNM Campus Acapulco con número de registro { } en el Sistema Nacional de Posgrado antes PNPC en modalidad presencial dado que ha 
+          logrado pasar con exito los criterios de seleccion de la convocatoria de nuevo ingreso { year }.
           </Text>
         </View>
 
