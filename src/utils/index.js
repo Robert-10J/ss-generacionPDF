@@ -30,3 +30,10 @@ export function obtenerAlumno(id, alumnos) {
   const findOneAlumno = alumnos.find(alumno => alumno.id === id) 
   return findOneAlumno
 }
+
+export function getTutores( arrayTutores = [] ) {
+  const data = arrayTutores.map(({ alumnodesignacion }) => {
+    return alumnodesignacion
+  })
+  console.log( data)
+}
