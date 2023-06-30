@@ -1,6 +1,196 @@
 {
   "alumnos" : [
     {
+       "id": 12,
+      "nombre": "Ana",
+      "apellidopaterno": "Morales",
+      "apellidomaterno": "Rojas",
+      "curp": "MORA870515MDFVNS08",
+      "email": "ana.morales@example.com",
+      "NumeroControl": "M21322007",
+      "Usuario": {
+        "name": "ANA",
+        "id": 13
+      },
+      "generacion": "Agosto --- 2021",
+      "Programa": 2,
+      "alumnodesignacion": [
+        {
+          "id": 3,
+          "Cargo_id": 1,
+          "Cargo__cargo": "Director.",
+          "Docente_id": 1,
+          "Docente_nombre": "Luis alberto lorenzo Lorenzo"
+        },
+        {
+          "id": 2,
+          "Cargo_id": 3,
+          "Cargo__cargo": "Tutor",
+          "Docente_id": 2,
+          "Docente_nombre": "brayan heranades mejia"
+        },
+        {
+          "id": 4,
+          "Cargo_id": 2,
+          "Cargo__cargo": "Coodirector",
+          "Docente_id": 3,
+          "Docente_nombre": "Juan Miguel Hernández Hernandez"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "nombre": "José",
+      "apellidopaterno": "López",
+      "apellidomaterno": "Martínez",
+      "curp": "LOMJ910728MDFRZS07",
+      "email": "jose.lopez@example.com",
+      "NumeroControl": "M21322006",
+      "Usuario": {
+        "name": "JOSE",
+        "id": 12
+      },
+      "generacion": "Agosto --- 2021",
+      "Programa": 2,
+      "alumnodesignacion": [
+        {
+          "id": 3,
+          "Cargo_id": 1,
+          "Cargo__cargo": "Director.",
+          "Docente_id": 1,
+          "Docente_nombre": "Luis alberto lorenzo Lorenzo"
+        },
+        {
+          "id": 2,
+          "Cargo_id": 3,
+          "Cargo__cargo": "Tutor",
+          "Docente_id": 2,
+          "Docente_nombre": "brayan heranades mejia"
+        },
+        {
+          "id": 4,
+          "Cargo_id": 2,
+          "Cargo__cargo": "Coodirector",
+          "Docente_id": 3,
+          "Docente_nombre": "Juan Miguel Hernández Hernandez"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "nombre": "María",
+      "apellidopaterno": "Rodríguez",
+      "apellidomaterno": "García",
+      "curp": "ROGM850912MDFDAA05",
+      "email": "maria.rodriguez@example.com",
+      "NumeroControl": "M21322005",
+      "Usuario": {
+        "name": "MARIA",
+        "id": 11
+      },
+      "generacion": "Agosto --- 2021",
+      "Programa": 2,
+      "alumnodesignacion": [
+        {
+          "id": 3,
+          "Cargo_id": 1,
+          "Cargo__cargo": "Director.",
+          "Docente_id": 1,
+          "Docente_nombre": "Luis alberto lorenzo Lorenzo"
+        },
+        {
+          "id": 2,
+          "Cargo_id": 3,
+          "Cargo__cargo": "Tutor",
+          "Docente_id": 2,
+          "Docente_nombre": "brayan heranades mejia"
+        },
+        {
+          "id": 4,
+          "Cargo_id": 2,
+          "Cargo__cargo": "Coodirector",
+          "Docente_id": 3,
+          "Docente_nombre": "Juan Miguel Hernández Hernandez"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "nombre": "Carlos",
+      "apellidopaterno": "Hernández",
+      "apellidomaterno": "Sánchez",
+      "curp": "HESC880502MDFRRR03",
+      "email": "carlos.hernandez@example.com",
+      "NumeroControl": "M21322004",
+      "Usuario": {
+        "name": "CARLOS",
+        "id": 10
+      },
+      "generacion": "Agosto --- 2021",
+      "Programa": 2,
+      "alumnodesignacion": [
+        {
+          "id": 3,
+          "Cargo_id": 1,
+          "Cargo__cargo": "Director.",
+          "Docente_id": 1,
+          "Docente_nombre": "Luis alberto lorenzo Lorenzo"
+        },
+        {
+          "id": 2,
+          "Cargo_id": 3,
+          "Cargo__cargo": "Tutor",
+          "Docente_id": 2,
+          "Docente_nombre": "brayan heranades mejia"
+        },
+        {
+          "id": 4,
+          "Cargo_id": 2,
+          "Cargo__cargo": "Coodirector",
+          "Docente_id": 3,
+          "Docente_nombre": "Juan Miguel Hernández Hernandez"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nombre": "Laura",
+      "apellidopaterno": "González",
+      "apellidomaterno": "López",
+      "curp": "GOAL950210MDFNPL01",
+      "email": "laura.gonzalez@example.com",
+      "NumeroControl": "M21322003",
+      "Usuario": {
+        "name": "LAURA",
+        "id": 10
+      },
+      "generacion": "Agosto --- 2021",
+      "Programa": 2,
+      "alumnodesignacion": [
+        {
+          "id": 3,
+          "Cargo_id": 1,
+          "Cargo__cargo": "Director.",
+          "Docente_id": 1,
+          "Docente_nombre": "Luis alberto lorenzo Lorenzo"
+        },
+        {
+          "id": 2,
+          "Cargo_id": 3,
+          "Cargo__cargo": "Tutor",
+          "Docente_id": 2,
+          "Docente_nombre": "brayan heranades mejia"
+        },
+        {
+          "id": 4,
+          "Cargo_id": 2,
+          "Cargo__cargo": "Coodirector",
+          "Docente_id": 3,
+          "Docente_nombre": "Juan Miguel Hernández Hernandez"
+        }
+      ]
+    },
+    {
       "id": 7,
       "nombre": "Brayan",
       "apellidopaterno": "Constantine",

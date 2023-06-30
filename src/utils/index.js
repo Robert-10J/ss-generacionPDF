@@ -31,9 +31,15 @@ export function obtenerAlumno(id, alumnos) {
   return findOneAlumno
 }
 
-export function getTutores( arrayTutores = [] ) {
-  const data = arrayTutores.map(({ alumnodesignacion }) => {
-    return alumnodesignacion
+export function getTutores({ 
+  arrayTutores = [], 
+  cargo = '', 
+  maestroCargo = '' 
+}) {
+  const datosTutor = arrayTutores.map( arrTutor => arrTutor.filter( objTutor => {
+      return objTutor.Cargo__cargo === cargo && objTutor.Docente_nombre.includes(maestroCargo)
   })
-  console.log( data)
+  ).filter( arrTutor => arrTutor.length > 0)
+
+  return datosTutor
 }

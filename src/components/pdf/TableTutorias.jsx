@@ -24,14 +24,13 @@ const styles = StyleSheet.create({
     fontSize: 10, 
     marginLeft: 3,
   }, 
-  col: {
-    width: '20%',
-  }
-});
+  col: { width: '20%' }   
+})
 
-const TableTutorias = () => {
+const TableTutorias = ({ tutoresInfo }) => {
   return (
     <View style={styles.table}>
+       {/* ENCABEZADO DE LA TABLA */}
       <View style={styles.tableRow}>
         <View style={[styles.tableCol, styles.col]}>
           <Text style={styles.tableCell}>Año</Text>
@@ -41,16 +40,24 @@ const TableTutorias = () => {
         </View>
       </View>
 
-      <View style={styles.tableRow}>
-        <View style={[styles.tableCol, styles.col]}>
-          <Text style={styles.tableCell}>2019</Text>
-        </View>
-        <View style={styles.tableCol}>
-          <Text style={styles.tableCell}>Herrera Pimber Guadalupe</Text>
-          <Text style={styles.tableCell}>Lopez Hernandez Eydi</Text>
-        </View>
-      </View>
-      <View style={styles.tableRow}>
+      {/* CUERPO DE LA TABLA */}
+
+      {
+        tutoresInfo?.map( ([item]) => (
+          <View key={item.id} style={styles.tableRow}>
+            <View style={[styles.tableCol, styles.col]}>
+              <Text style={styles.tableCell}>2019</Text>
+            </View>
+            <View style={styles.tableCol}>
+              <Text style={styles.tableCell}>{item.Docente_nombre}</Text>
+            </View>
+          </View>
+         ))
+      }
+      
+
+
+      {/* <View style={styles.tableRow}>
         <View style={[styles.tableCol, styles.col]}>
           <Text style={styles.tableCell}>2020</Text>
         </View>
@@ -62,6 +69,7 @@ const TableTutorias = () => {
           <Text style={styles.tableCell}>Visoso Rogriguez Victor Daniel </Text>
         </View>
       </View>
+
       <View style={styles.tableRow}>
         <View style={[styles.tableCol, styles.col]}>
           <Text style={styles.tableCell}>2021</Text>
@@ -73,7 +81,8 @@ const TableTutorias = () => {
           <Text style={styles.tableCell}>Martinez Valencia Ricardo Fabrizio</Text>
           <Text style={styles.tableCell}>Visoso Rogriguez Victor Daniel </Text>
         </View>
-      </View>
+      </View> */}
+
     </View>
   )
 }
