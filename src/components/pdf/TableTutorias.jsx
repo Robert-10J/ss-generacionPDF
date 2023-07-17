@@ -43,13 +43,17 @@ const TableTutorias = ({ tutoresInfo }) => {
       {/* CUERPO DE LA TABLA */}
 
       {
-        tutoresInfo?.map( ([item]) => (
+        /* tutoresInfo?.map( item => (
+          console.log(item.nombre)
+        )) */
+
+        tutoresInfo?.map( item  => (
           <View key={item.id} style={styles.tableRow}>
             <View style={[styles.tableCol, styles.col]}>
               <Text style={styles.tableCell}>2019</Text>
             </View>
             <View style={styles.tableCol}>
-              <Text style={styles.tableCell}>{item.Docente_nombre}</Text>
+              <Text style={styles.tableCell}>{item.nombre}</Text>
             </View>
           </View>
          ))

@@ -11,21 +11,63 @@ const App = () => {
 
   useEffect(() => {
     const getAlumnos = async () => {
-      const data = await obtenerAlumnos()
-      const dt = data?.map(({ alumnodesignacion }) => {
-        return alumnodesignacion
+      const data = await obtenerAlumnos()      
+      const dt = data?.map(({ nombre, apellidopaterno, apellidomaterno, alumnodesignacion  }) => {
+        return { 
+          nombre, 
+          apellidopaterno, 
+          apellidomaterno, 
+          alumnodesignacion 
+        }
       })    
       
-      const infoTutores = getTutores({
-        arrayTutores: dt,
+      function obtenerAlumnosPorTutor({ tutor = '', arregloAlumnos = []}) {
+
+        // Filtrar los alumnos por tutor
+
+        const alumnosFiltrados = arregloAlumnos.filter( alumno => {
+          return alumno.alumnodesignacion.some(
+            asignacion => asignacion.Cargo__cargo === tutor
+          )
+        })
+
+        // Obtener los datos de los alumnos filtrados
+        const datosAlumnos = alumnosFiltrados.map((alumno) => {
+          return {
+            nombre: alumno.nombre,
+            apellidopaterno: alumno.apellidopaterno,
+            apellidomaterno: alumno.apellidomaterno,
+            cargo: alumno.alumnodesignacion.find(
+              (asignacion) => asignacion.Cargo__cargo === tutor
+            ).Cargo__cargo,
+            docente: alumno.alumnodesignacion.find(
+              (asignacion) => asignacion.Cargo__cargo === tutor
+            ).Docente_nombre,
+          };
+        });
+
+        return datosAlumnos
+      }
+
+      const getData = obtenerAlumnosPorTutor({ 
+        tutor: 'Tutor',
+        arregloAlumnos: dt
+      })
+
+      setTutoresInfo(getData)
+
+    /*   const infoTutores = getTutores({
+        arrayTutores: dt.alumnodesignacion,
         cargo: 'Coodirector',
         maestroCargo: 'Juan'
       })
 
-      setTutoresInfo( infoTutores )
+      setTutoresInfo( infoTutores ) */
     }
     getAlumnos()
   }, [])
+
+  console.log(tutoresInfo)
   
   return (
     <main className='grid md:grid-cols-2'>

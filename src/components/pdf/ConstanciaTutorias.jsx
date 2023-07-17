@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Font } from '@react-pdf/renderer'
+import { Text, View, Font } from '@react-pdf/renderer'
 
 import { extraBold, extraLight, medium, regular, extraLightItalic } from './assets/fonts';
 
