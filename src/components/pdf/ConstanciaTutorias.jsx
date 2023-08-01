@@ -1,13 +1,12 @@
 import { Text, View, StyleSheet, Font } from '@react-pdf/renderer'
 
-import { extraBold, extraLight, medium, regular, extraLightItalic } from './assets/fonts';
+import  { extraBold, extraLight, medium, regular, extraLightItalic } from './assets/fonts';
 
 import { fecha } from '../../utils';
 import Plantilla from './Plantilla';
 
 import TableTutorias from './TableTutorias';
 import pdfStyles from './pdfStyles';
-
 
 const { fechaFormato, year } = fecha();
 
@@ -26,7 +25,6 @@ Font.register({family: 'Montserrat', fonts: [
     fontStyle: 'italic',
   }
 ]});
-
 
 const ConstanciaTutorias = () => {
   return (
