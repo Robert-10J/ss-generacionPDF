@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
     height: '1.24409in', // medida del documento de cm a pulgadas
     marginLeft: '0.984252in',
     marginRight: '0.787402in', 
-    backgroundColor: 'tomato',
   },
   imgEducacion: { width: '280', marginTop: '50', marginLeft: '50' },
 });

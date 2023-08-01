@@ -26,7 +26,7 @@ Font.register({family: 'Montserrat', fonts: [
   }
 ]});
 
-const ConstanciaTutorias = () => {
+const ConstanciaTutorias = ({ tutoresInfo }) => {
   return (
     <Plantilla>
       <View style={pdfStyles.fuente}>
@@ -48,9 +48,13 @@ const ConstanciaTutorias = () => {
             como se indica a continuación: </Text>
         </View>
 
-        <TableTutorias>
+        <TableTutorias tutoresInfo={tutoresInfo} />
 
-        </TableTutorias>
+        <View style={pdfStyles.textoLeft}>
+          <Text style={pdfStyles.textoUpperA}>A t e n t a m e n t e</Text>
+          <Text style={[pdfStyles.textUltraLight, pdfStyles.fontSize]}>Excelencia en Educación Tecnológica	&reg;</Text>
+          <Text style={{...pdfStyles.textUltraLight,fontSize:'7'}}>Educación Tecnológica con Compromiso Social</Text>
+        </View>
 
         <View style={pdfStyles.conteFirmas}>
           <View>

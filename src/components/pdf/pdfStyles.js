@@ -71,6 +71,34 @@ const fontSize = {
     fontWeight: 'medium',
   };
 
+  //ESTILOS TABLA DE TUTORIAS 
+
+    const table = {
+      width: '100%',
+      display: "table",
+      borderStyle: "solid", 
+      borderTop: 1,
+      borderLeft:1,
+    };
+    const tableRow = {
+      width: '100%',
+      margin: "auto",
+      flexDirection: "row", 
+      borderBottom: 1,
+    };
+    const tableCol = {
+      width: '100%',
+      borderStyle: "solid", 
+      borderRight: 1,
+    };
+     const tableCell = {
+      marginTop: 5,
+      fontSize: 10, 
+      marginLeft: 3,
+    };
+    const col = { width: '20%' }   
+
+
   //ESTILOS CARTA DE ACEPTACIÓN 
 
     const textoUpperA = {
@@ -109,4 +137,8 @@ export default StyleSheet.create({
   textoUpperA,
   textR, 
   textoLeft,
+  table, 
+  tableRow, 
+  tableCell, 
+  tableCol
 });
