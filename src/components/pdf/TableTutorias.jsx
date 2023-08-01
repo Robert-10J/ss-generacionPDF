@@ -1,7 +1,6 @@
 import { Text, View } from '@react-pdf/renderer'
 import pdfStyles from './pdfStyles'
 
-
 const TableTutorias = ({ tutoresInfo }) => {
   return (
     <View style={pdfStyles.table}>
@@ -27,10 +26,8 @@ const TableTutorias = ({ tutoresInfo }) => {
               <Text style={pdfStyles.tableCell}>{item.Docente_nombre}</Text>
             </View>
           </View>
-         ))
+        ))
       }
-      
-
 
       {/* <View style={styles.tableRow}>
         <View style={[styles.tableCol, styles.col]}>
@@ -57,7 +54,6 @@ const TableTutorias = ({ tutoresInfo }) => {
           <Text style={styles.tableCell}>Visoso Rogriguez Victor Daniel </Text>
         </View>
       </View> */}
-
     </View>
   )
 }

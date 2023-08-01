@@ -1,23 +1,21 @@
 /**
  * Obtiene la fecha actual en formato dd/mm/yyyy.
  * @returns {Object} Objeto con la fecha formateada y el año actual.
- * @property {string} fechaFormato - La fecha actual en formato dd/mm/yyyy.
- * @property {number} year - El año actual.
  */
 export function fecha() {
   let fecha = new Date()
   let dia = fecha.getDate()
   let mes = fecha.getMonth() + 1
-  let year = fecha.getFullYear()
+  let anio = fecha.getFullYear()
 
   let fechaFormato = ''
 
-  if (mes < 10) fechaFormato = `${dia}/0${mes}/${year}`;
-  else  fechaFormato = `${dia}/${mes}/${year}`; 
+  if (mes < 10) fechaFormato = `${dia}/0${mes}/${anio}`;
+  else  fechaFormato = `${dia}/${mes}/${anio}`; 
   
   return {
     fechaFormato, 
-    year
+    anio
   }
 }
 

@@ -1,14 +1,11 @@
-import { Text, View, StyleSheet, Font } from '@react-pdf/renderer'
-
+import { Text, View, Font } from '@react-pdf/renderer'
 import { extraBold, extraLight, medium, regular, extraLightItalic } from './assets/fonts';
-
 import Plantilla from './Plantilla';
 import pdfStyles from './pdfStyles';
-
 import { fecha } from '../../utils';
 
 /**
- *  @returns Registro de fuentes para el cuerpo del document
+ * Registro de fuentes para el cuerpo del document
  */
 
 Font.register({family: 'Montserrat', fonts: [
@@ -26,11 +23,6 @@ Font.register({family: 'Montserrat', fonts: [
     fontStyle: 'italic',
   }
 ]})
-
-/**
- *  @returns Estilos para el cuerpo del document
- */
-
 
 const CartaAceptacion = ({ nombre, apellidoPaterno, apellidoMaterno, numeroControl }) => {
 
