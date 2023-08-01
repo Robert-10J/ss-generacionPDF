@@ -1,15 +1,11 @@
 import { Text, View, Font } from '@react-pdf/renderer'
-
 import { extraBold, extraLight, medium, regular, extraLightItalic } from './assets/fonts';
-
-import { fecha } from '../../utils';
-import Plantilla from './Plantilla';
-
-import TableTutorias from './TableTutorias';
 import pdfStyles from './pdfStyles';
+import Plantilla from './Plantilla';
+import TableTutorias from './TableTutorias';
+import { fecha } from '../../utils';
 
-
-const { fechaFormato, year } = fecha();
+const { fechaFormato } = fecha();
 
 Font.register({family: 'Montserrat', fonts: [
   {

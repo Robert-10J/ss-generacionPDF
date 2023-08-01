@@ -4,33 +4,33 @@ const styles = StyleSheet.create({
   table: {
     width: '100%',
     display: "table",
-    borderStyle: "solid", 
+    borderStyle: "solid",
     borderTop: 1,
-    borderLeft:1,
+    borderLeft: 1,
   },
   tableRow: {
     width: '100%',
     margin: "auto",
-    flexDirection: "row", 
+    flexDirection: "row",
     borderBottom: 1,
   },
   tableCol: {
     width: '100%',
-    borderStyle: "solid", 
+    borderStyle: "solid",
     borderRight: 1,
   },
   tableCell: {
     marginTop: 5,
-    fontSize: 10, 
+    fontSize: 10,
     marginLeft: 3,
-  }, 
-  col: { width: '20%' }   
+  },
+  col: { width: '20%' }
 })
 
 const TableTutorias = ({ tutoresInfo }) => {
   return (
     <View style={styles.table}>
-       {/* ENCABEZADO DE LA TABLA */}
+      {/* ENCABEZADO DE LA TABLA */}
       <View style={styles.tableRow}>
         <View style={[styles.tableCol, styles.col]}>
           <Text style={styles.tableCell}>Año</Text>
@@ -43,11 +43,7 @@ const TableTutorias = ({ tutoresInfo }) => {
       {/* CUERPO DE LA TABLA */}
 
       {
-        /* tutoresInfo?.map( item => (
-          console.log(item.nombre)
-        )) */
-
-        tutoresInfo?.map( item  => (
+        tutoresInfo?.map(item => (
           <View key={item.id} style={styles.tableRow}>
             <View style={[styles.tableCol, styles.col]}>
               <Text style={styles.tableCell}>2019</Text>
@@ -56,10 +52,8 @@ const TableTutorias = ({ tutoresInfo }) => {
               <Text style={styles.tableCell}>{item.nombre}</Text>
             </View>
           </View>
-         ))
+        ))
       }
-      
-
 
       {/* <View style={styles.tableRow}>
         <View style={[styles.tableCol, styles.col]}>
@@ -86,7 +80,6 @@ const TableTutorias = ({ tutoresInfo }) => {
           <Text style={styles.tableCell}>Visoso Rogriguez Victor Daniel </Text>
         </View>
       </View> */}
-
     </View>
   )
 }

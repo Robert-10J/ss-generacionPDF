@@ -5,6 +5,7 @@ import ConstanciaTutorias from './components/pdf/ConstanciaTutorias'
 import { obtenerAlumnos } from './services/peticiones'
 import { getTutores } from './utils'
 import { useEffect, useState } from 'react'
+import CartaAceptacion from './components/pdf/CartaAceptación'
 
 const App = () => {
   const [tutoresInfo, setTutoresInfo] = useState([])
@@ -13,18 +14,16 @@ const App = () => {
     const getAlumnos = async () => {
       const data = await obtenerAlumnos()      
       const dt = data?.map(({ nombre, apellidopaterno, apellidomaterno, alumnodesignacion  }) => {
-        return { 
+        return {
           nombre, 
           apellidopaterno, 
-          apellidomaterno, 
+          apellidomaterno,
           alumnodesignacion 
         }
       })    
       
-      function obtenerAlumnosPorTutor({ tutor = '', arregloAlumnos = []}) {
-
+      function obtenerAlumnosPorTutor({tutor = '', arregloAlumnos = []}) {
         // Filtrar los alumnos por tutor
-
         const alumnosFiltrados = arregloAlumnos.filter( alumno => {
           return alumno.alumnodesignacion.some(
             asignacion => asignacion.Cargo__cargo === tutor
@@ -73,9 +72,10 @@ const App = () => {
     <main className='grid md:grid-cols-2'>
       <Tabla/>
       <PDFViewer className='w-full h-screen'>
-        <ConstanciaTutorias
+        {/* <ConstanciaTutorias
           tutoresInfo={tutoresInfo}
-        />
+        /> */}
+        <CartaAceptacion/>
       </PDFViewer>
     </main>
   )
